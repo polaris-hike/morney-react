@@ -356,7 +356,12 @@ module.exports = function(webpackEnv) {
                   options:{
                   }
                 },
-                  'svgo-loader'
+                {
+                  loader: 'svgo-loader',
+                  options: {
+                    plugins:[{removeAttrs:{attrs:'fill'}}]
+                  }
+                }
               ]
             },
             // "url" loader works like "file" loader except that it embeds assets
