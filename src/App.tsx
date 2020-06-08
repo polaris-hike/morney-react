@@ -37,7 +37,6 @@ function App() {
                     </Switch>
                 </Main>
                 <Nav />
-
             </Wrapper>
         </Router>
     );
