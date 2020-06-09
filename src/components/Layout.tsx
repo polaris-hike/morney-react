@@ -14,8 +14,6 @@ const Main = styled.div`
 `;
 
 const Layout = (props: any) => {
-    console.log(1);
-    console.log(props);
     return (
         <Wrapper>
             <Main>
