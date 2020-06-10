@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import React from 'react';
 
-const TagsSection = styled.section`
+const _TagsSection = styled.section`
   flex-grow: 1;
   padding: 0 16px;
   background-color: #fff;
@@ -26,4 +27,18 @@ const TagsSection = styled.section`
   }
 `;
 
-export default TagsSection
+const TagsSection: React.FC = () => {
+    return (
+        <_TagsSection>
+            <ol>
+                <li>衣</li>
+                <li>食</li>
+                <li>住</li>
+                <li>行</li>
+            </ol>
+            <button>新增标签</button>
+        </_TagsSection>
+    );
+};
+
+export default TagsSection;
