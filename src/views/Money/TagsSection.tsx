@@ -1,12 +1,15 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
 
-const _TagsSection = styled.section`
+const Wrapper = styled.section`
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
   flex-grow: 1;
-  padding: 0 16px;
+  padding: 12px 16px;
   background-color: #fff;
   > ol {
-    padding: 0 4px;
     margin: 12px -12px;
       > li {
           display: inline-block;
@@ -15,6 +18,9 @@ const _TagsSection = styled.section`
           padding: 3px 18px;
           font-size: 14px;
           margin: 8px 12px;
+          &.selected {
+            background-color: #f60;
+          }
       }
   }
   > button {
@@ -28,16 +34,33 @@ const _TagsSection = styled.section`
 `;
 
 const TagsSection: React.FC = () => {
+    const [tags, setTags] = useState<string[]>(['衣', '食', '住', '行']);
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
+    const onAddTag = () => {
+        const tagName = window.prompt('新标签的名称为');
+        if (tagName) {
+            setTags([...tags, tagName]);
+        }
+    };
+    const onSelectedTag = (tag: string) => {
+        if (selectedTags.indexOf(tag) === -1) {
+            setSelectedTags([...selectedTags, tag]);
+        } else {
+            setSelectedTags(selectedTags.filter(t => t !== tag));
+        }
+    };
     return (
-        <_TagsSection>
+        <Wrapper>
             <ol>
-                <li>衣</li>
-                <li>食</li>
-                <li>住</li>
-                <li>行</li>
+                {
+                    tags.map((item, index) => (
+                            <li className={selectedTags.indexOf(item) !== -1 ? 'selected' : ''} onClick={() => onSelectedTag(item)} key={index}>{item}</li>
+                        )
+                    )
+                }
             </ol>
-            <button>新增标签</button>
-        </_TagsSection>
+            <button onClick={onAddTag}>新增标签</button>
+        </Wrapper>
     );
 };
 

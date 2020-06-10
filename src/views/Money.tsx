@@ -14,7 +14,6 @@ const Money = () => {
     return (
         <MyLayout>
             <TagsSection>
-
             </TagsSection>
             <NotesSection>
                 <label>
