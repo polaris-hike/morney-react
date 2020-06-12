@@ -12,33 +12,27 @@ const MyLayout = styled(Layout)`
 `;
 type Category = '-' | '+';
 const Money = () => {
-    const [obj,setObj] = useState({
-        tags:[] as string[],
-        note:'',
-        category:'-' as Category,
-        output:'0'
-    })
+    const [obj, setObj] = useState({
+        tags: [] as string[],
+        note: '',
+        category: '-' as Category,
+        output: '0'
+    });
+    const onChange = (v: Partial<typeof obj>) => {
+        setObj({
+            ...obj,
+            ...v
+        });
+    };
     return (
         <MyLayout>
-            <TagsSection selected={obj.tags} onChange={(tags)=>setObj({
-                ...obj,
-                tags
-            })}>
+            <TagsSection selected={obj.tags} onChange={(tags) => onChange({tags})}>
             </TagsSection>
-            <NoteSection value={obj.note} onChange={(note)=>setObj({
-                ...obj,
-                note
-            })}>
+            <NoteSection value={obj.note} onChange={(note) => onChange({note})}>
             </NoteSection>
-            <CategorySection value={obj.category} onChange={(category)=>setObj({
-                ...obj,
-                category
-            })}>
+            <CategorySection value={obj.category} onChange={(category) => onChange({category })}>
             </CategorySection>
-            <NumberPadSection value={obj.output} onChange={(output)=>setObj({
-                ...obj,
-                output
-            })}  onOK={()=>alert(obj)}>
+            <NumberPadSection value={obj.output} onChange={(output) => onChange({output})} onOK={() => alert(obj)}>
             </NumberPadSection>
         </MyLayout>
     );
