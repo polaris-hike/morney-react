@@ -25,20 +25,23 @@ const Wrapper = styled.section`
   }
 `;
 
-const CategorySection: React.FC = () => {
+type Props = {
+    value:'-' | '+',
+    onChange:(category:'-' | '+',)=>void
+}
+const CategorySection: React.FC<Props> = (props) => {
     const hashCategory = {
         '-': '支出', '+': '收入'
     };
     type keys = keyof typeof hashCategory;
     const [categoryList] = useState<keys[]>(['-', '+']);
-    const [selectedCategory, setSelectedCategory] = useState('-');
-
+    const selectedCategory = props.value
     return (
         <Wrapper>
             <ul>
                 {
                     categoryList.map((item, index) => (
-                        <li key={index} onClick={() => setSelectedCategory(item)}
+                        <li key={index} onClick={() => props.onChange(item)}
                             className={selectedCategory === item ? 'selected' : ''}>{hashCategory[item]}</li>
                     ))
                 }
