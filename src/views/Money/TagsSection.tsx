@@ -35,23 +35,23 @@ display: flex;
 `;
 
 type Props = {
-    selected: string[],
-    onChange:(selected:string[])=>void
+    value: number[],
+    onChange:(selected:number[])=>void
 };
 const TagsSection: React.FC<Props> = (props) => {
     const {tags, setTags} = useTags();
-    const selectedTags = props.selected;
+    const selectedTagIds = props.value;
     const onAddTag = () => {
         const tagName = window.prompt('新标签的名称为');
         if (tagName) {
-            setTags([...tags, tagName]);
+            setTags([...tags, {id:tags.length,name:tagName}]);
         }
     };
-    const onSelectedTag = (tag: string) => {
-        if (selectedTags.indexOf(tag) === -1) {
-            props.onChange([...selectedTags, tag]);
+    const onSelectedTag = (tagId: number) => {
+        if (selectedTagIds.indexOf(tagId) === -1) {
+            props.onChange([...selectedTagIds, tagId]);
         } else {
-            props.onChange(selectedTags.filter(t => t !== tag));
+            props.onChange(selectedTagIds.filter(t => t !== tagId));
         }
     };
     return (
@@ -59,7 +59,7 @@ const TagsSection: React.FC<Props> = (props) => {
             <ol>
                 {
                     tags.map((item, index) => (
-                            <li className={selectedTags.indexOf(item) !== -1 ? 'selected' : ''} onClick={() => onSelectedTag(item)} key={index}>{item}</li>
+                            <li className={selectedTagIds.indexOf(item.id) !== -1 ? 'selected' : ''} onClick={() => onSelectedTag(item.id)} key={index}>{item.name}</li>
                         )
                     )
                 }
