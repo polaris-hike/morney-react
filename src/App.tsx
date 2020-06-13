@@ -5,18 +5,22 @@ import Money from './views/Money';
 import Statistics from './views/Statistics';
 import Tags from './views/Tags';
 import NoMatch from './views/NoMatch';
+import TagEdit from './views/TagEdit';
 
 function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/tags">
+                <Route exact path="/tags">
                     <Tags></Tags>
                 </Route>
-                <Route path="/money">
+                <Route exact path="/tags/:tag">
+                    <TagEdit></TagEdit>
+                </Route>
+                <Route exact path="/money">
                     <Money></Money>
                 </Route>
-                <Route path="/statistics">
+                <Route exact path="/statistics">
                     <Statistics></Statistics>
                 </Route>
                 <Redirect exact from="/" to="/money"></Redirect>
