@@ -16,6 +16,9 @@ const Topbar = styled.header`
   line-height: 20px;
   padding: 14px;
   background:white;
+  .icon {
+    transform: rotate(180deg);
+  }
 `;
 const InputWrapper = styled.div`
   background:white;
@@ -23,27 +26,29 @@ const InputWrapper = styled.div`
   margin-top: 8px;
 `;
 
-const TagEdit: React.FC = () => {
-    const {tags} = useTags();
+const TagEdit: React.FC = (props) => {
+    const {tags,updateTag,deleteTag} = useTags();
     const {id} = useParams();
     const tag = tags.filter((v)=>v.id === parseInt(id))[0];
-    console.log(tag);
+    const xxx = (id:number)=>{
+        deleteTag(id)
+    }
     return (
         <div>
             <Layout>
                 <Topbar>
-                    <Icon name="left"/>
+                    <Icon name="right"/>
                     <span>编辑标签</span>
                     <span/>
                 </Topbar>
                 <InputWrapper>
-                    <Input label="标签名" type="text" placeholder="标签名" value={tag.name}/>
+                    <Input label="标签名" type="text" onChange={(e)=> {updateTag(tag.id,e.target.value)}} placeholder="标签名" value={tag.name}/>
                 </InputWrapper>
                 <Center>
                     <Space/>
                     <Space/>
                     <Space/>
-                    <Button>删除标签</Button>
+                    <Button onClick={()=>xxx(tag.id)}>删除标签</Button>
                 </Center>
             </Layout>
         </div>
