@@ -22,7 +22,7 @@ const defaultTags = [
 
 const useTags = ()=>{
     const [tags, setTags] = useState<{id:number,name:string}[]>(defaultTags);
-    const findTagIndex = (id:number) {
+    const findTagIndex = (id:number) =>{
         let result = -1;
         for(let i = 0;i < tags.length;i++){
             if(tags[i].id === id) {
@@ -33,16 +33,10 @@ const useTags = ()=>{
         return result
     }
     const updateTag = (id:number,name:string)=>{
-        const newTags = JSON.parse(JSON.stringify(tags));
-        const result = findTagIndex(id);
-        newTags.splice(result,1,{id,name})
-        setTags(newTags)
+        setTags(tags.map(tag=> tag.id === id ? {id,name} :tag))
     };
     const deleteTag = (id:number)=> {
-        const newTags = JSON.parse(JSON.stringify(tags));
-        const result = findTagIndex(id);
-        newTags.splice(result,1,)
-        setTags(newTags)
+        setTags(tags.filter((tag)=>tag.id !== id))
     }
     return {
         tags,
