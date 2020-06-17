@@ -8,6 +8,7 @@ import {Input} from 'components/Input';
 import {Center} from 'components/Center';
 import {Space} from 'components/Space';
 import styled from 'styled-components';
+
 type Params = {
     id: string
 }
@@ -32,7 +33,6 @@ const TagEdit: React.FC = (props) => {
     const {findTag, updateTag, deleteTag} = useTags();
     let {id: idString} = useParams<Params>();
     const tag = findTag(parseInt(idString));
-    console.log(tag);
     const tagContent = (tag: { id: number; name: string }) => (
         <div>
             <InputWrapper>
@@ -53,10 +53,10 @@ const TagEdit: React.FC = (props) => {
             </Center>
         </div>
     );
-    const history = useHistory()
-    const onClickBack = ()=>{
-        history.goBack()
-    }
+    const history = useHistory();
+    const onClickBack = () => {
+        history.goBack();
+    };
 
     return (
         <Layout>
