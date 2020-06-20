@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wuxuweilalala/morney-react/static/css/main.1dee45dc.chunk.css",
+    "main.js": "/wuxuweilalala/morney-react/static/js/main.f2c840fe.chunk.js",
+    "main.js.map": "/wuxuweilalala/morney-react/static/js/main.f2c840fe.chunk.js.map",
+    "runtime-main.js": "/wuxuweilalala/morney-react/static/js/runtime-main.4f725d90.js",
+    "runtime-main.js.map": "/wuxuweilalala/morney-react/static/js/runtime-main.4f725d90.js.map",
+    "static/js/2.080376c9.chunk.js": "/wuxuweilalala/morney-react/static/js/2.080376c9.chunk.js",
+    "static/js/2.080376c9.chunk.js.map": "/wuxuweilalala/morney-react/static/js/2.080376c9.chunk.js.map",
+    "index.html": "/wuxuweilalala/morney-react/index.html",
+    "precache-manifest.78b57a5d7785fcf5365eb53cb73f4b40.js": "/wuxuweilalala/morney-react/precache-manifest.78b57a5d7785fcf5365eb53cb73f4b40.js",
+    "service-worker.js": "/wuxuweilalala/morney-react/service-worker.js",
+    "static/css/main.1dee45dc.chunk.css.map": "/wuxuweilalala/morney-react/static/css/main.1dee45dc.chunk.css.map",
+    "static/js/2.080376c9.chunk.js.LICENSE.txt": "/wuxuweilalala/morney-react/static/js/2.080376c9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f725d90.js",
+    "static/js/2.080376c9.chunk.js",
+    "static/css/main.1dee45dc.chunk.css",
+    "static/js/main.f2c840fe.chunk.js"
+  ]
+}
