@@ -11,6 +11,9 @@ const MyLayout = styled(Layout)`
   display:flex;
   flex-direction: column;
 `;
+const CategoryWrapper = styled.div`
+      background:#c4c4c4;
+`
 const defaultFormData = {
     tagIds: [] as number[],
     note: '',
@@ -21,7 +24,7 @@ const defaultFormData = {
 type Category = '-' | '+';
 const Money = () => {
     const [obj, setObj] = useState(defaultFormData);
-    const {records, addRecord} = useRecords();
+    const {addRecord} = useRecords();
     const onChange = (v: Partial<typeof obj>) => {
         setObj({
             ...obj,
@@ -39,8 +42,10 @@ const Money = () => {
             </TagsSection>
             <NoteSection value={obj.note} onChange={(note) => onChange({note})}>
             </NoteSection>
-            <CategorySection value={obj.category} onChange={(category) => onChange({category})}>
-            </CategorySection>
+            <CategoryWrapper>
+                <CategorySection value={obj.category} onChange={(category) => onChange({category})}>
+                </CategorySection>
+            </CategoryWrapper>
             <NumberPadSection value={obj.output} onChange={(output) => onChange({output})} onOK={() => submit()}>
             </NumberPadSection>
         </MyLayout>
