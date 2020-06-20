@@ -10,7 +10,7 @@ type RecordItem = {
 }
 type newRecordItem = Omit<RecordItem, 'createdAt'>
 
-export const useRecords = () => {
+const useRecords = () => {
     const [records, setRecords] = useState<RecordItem[]>([]);
     useEffect(() => {
         setRecords(JSON.parse(window.localStorage.getItem('records') || '[]'));
@@ -27,3 +27,5 @@ export const useRecords = () => {
 
     return {records, addRecord};
 };
+
+export default useRecords

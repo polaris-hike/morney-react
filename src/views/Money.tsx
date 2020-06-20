@@ -5,7 +5,7 @@ import TagsSection from './Money/TagsSection';
 import NoteSection from './Money/NoteSection';
 import CategorySection from './Money/CategorySection';
 import NumberPadSection from './Money/NumberPadSection';
-import {useRecords} from '../components/Hooks/useRecords';
+import useRecords from '../components/Hooks/useRecords';
 
 const MyLayout = styled(Layout)`
   display:flex;
