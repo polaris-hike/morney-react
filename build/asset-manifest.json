@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/morney-react/build/static/css/main.1dee45dc.chunk.css",
-    "main.js": "/morney-react/build/static/js/main.f2c840fe.chunk.js",
-    "main.js.map": "/morney-react/build/static/js/main.f2c840fe.chunk.js.map",
+    "main.js": "/morney-react/build/static/js/main.88c9f187.chunk.js",
+    "main.js.map": "/morney-react/build/static/js/main.88c9f187.chunk.js.map",
     "runtime-main.js": "/morney-react/build/static/js/runtime-main.cf773b71.js",
     "runtime-main.js.map": "/morney-react/build/static/js/runtime-main.cf773b71.js.map",
-    "static/js/2.5e919684.chunk.js": "/morney-react/build/static/js/2.5e919684.chunk.js",
-    "static/js/2.5e919684.chunk.js.map": "/morney-react/build/static/js/2.5e919684.chunk.js.map",
+    "static/js/2.14ad17f2.chunk.js": "/morney-react/build/static/js/2.14ad17f2.chunk.js",
+    "static/js/2.14ad17f2.chunk.js.map": "/morney-react/build/static/js/2.14ad17f2.chunk.js.map",
     "index.html": "/morney-react/build/index.html",
-    "precache-manifest.ca1fad7e53d4044cf5c6283e79293d23.js": "/morney-react/build/precache-manifest.ca1fad7e53d4044cf5c6283e79293d23.js",
+    "precache-manifest.df76b4629bbfc39ec05ef83d8bd38fb2.js": "/morney-react/build/precache-manifest.df76b4629bbfc39ec05ef83d8bd38fb2.js",
     "service-worker.js": "/morney-react/build/service-worker.js",
     "static/css/main.1dee45dc.chunk.css.map": "/morney-react/build/static/css/main.1dee45dc.chunk.css.map",
-    "static/js/2.5e919684.chunk.js.LICENSE.txt": "/morney-react/build/static/js/2.5e919684.chunk.js.LICENSE.txt"
+    "static/js/2.14ad17f2.chunk.js.LICENSE.txt": "/morney-react/build/static/js/2.14ad17f2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cf773b71.js",
-    "static/js/2.5e919684.chunk.js",
+    "static/js/2.14ad17f2.chunk.js",
     "static/css/main.1dee45dc.chunk.css",
-    "static/js/main.f2c840fe.chunk.js"
+    "static/js/main.88c9f187.chunk.js"
   ]
 }
