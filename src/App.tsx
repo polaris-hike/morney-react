@@ -10,7 +10,7 @@ import    TagEdit from './views/TagEdit';
 function App() {
     return (
         <Router>
-            <Switch>
+             <Switch>
                 <Route exact path="/tags">
                     <Tags></Tags>
                 </Route>
