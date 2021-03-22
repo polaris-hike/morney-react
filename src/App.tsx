@@ -5,7 +5,7 @@ import Money from './views/Money';
 import Statistics from './views/Statistics';
 import Tags from './views/Tags';
 import NoMatch from './views/NoMatch';
-import   TagEdit from './views/TagEdit';
+import    TagEdit from './views/TagEdit';
 
 function App() {
     return (
