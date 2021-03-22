@@ -12,7 +12,7 @@ function App() {
     return (
         console.log('master2')
         <Router>
-            <Switch>
+             <Switch>
                 <Route exact path="/tags">
                     <Tags></Tags>
                 </Route>
