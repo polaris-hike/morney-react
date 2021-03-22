@@ -30,6 +30,7 @@ function App() {
             </Switch>
         </Router>
     );
+    console.log('test1')
 }
 
 export default App;
