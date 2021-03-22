@@ -14,8 +14,8 @@ function App() {
         <Router>
              <Switch>
                 <Route exact path="/tags">
-                    <Tags></Tags>
-                </Route>
+                     <Tags></Tags>
+                 </Route>
                 <Route exact path="/tags/:id">
                     <TagEdit></TagEdit>
                 </Route>
