@@ -28,7 +28,6 @@ function App() {
                     <NoMatch></NoMatch>
                 </Route>
             </Switch>
-
         </Router>
     );
 }
