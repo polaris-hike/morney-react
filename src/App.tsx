@@ -8,6 +8,7 @@ import NoMatch from './views/NoMatch';
 import    TagEdit from './views/TagEdit';
 
 function App() {
+    console.log('master1')
     return (
         <Router>
             <Switch>
