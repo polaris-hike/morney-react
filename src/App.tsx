@@ -32,10 +32,5 @@ function App() {
             </Switch>
         </Router>
     );
-    console.log('test1')
-    console.log('test2s')
 }
-444
-6555
-88
 export default App;
