@@ -33,6 +33,7 @@ function App() {
         </Router>
     );
     console.log('test1')
+    console.log('test2s')
 }
 
 export default App;
